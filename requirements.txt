@@ -1,5 +1,7 @@
-streamlit == 0.82.0
-google-cloud-firestore == 2.1.1
-json5 == 0.9.5
-google-auth == 1.30.0
+streamlit 
+pandas
+numpy
+sklearn
+joblib
+
 
