@@ -20,7 +20,7 @@ class CreditChurnClassification():
         
 
 
-prediction_model = load('../Models/Churn_xgb_top.pkl')
+prediction_model = load('Churn_xgb_top.pkl')
 
 #Setting up page configuration
 st.set_page_config(page_title= 'Group 3', initial_sidebar_state='auto') 
