@@ -32,7 +32,7 @@ st.markdown('<p style= "text-align:center; color: black;  font-size: 18px">We in
 with st.form("info"):
     st.markdown("**Just fill in the details and we'll let you know** :yum: ")
     
-    col1 , col2 = st.beta_columns(2)
+    col1 , col2 = st.columns(2)
     age = col1.slider('Age', min_value=18,max_value=75)
     gender = col2.selectbox('Gender', options=("M","F"))
     total_rel_cnt = col2.number_input("Total Relationship Count",value = 5)
