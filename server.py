@@ -61,10 +61,13 @@ if submit:
     
     X = pd.DataFrame(data, index = [0])
     attrition = prediction_model.model.predict(X)
+    pred_prob = prediction_model.model.predict_proba(X)
     
     if attrition[0] == 0:
         st.balloons()
         st.success("The customer is not likely to churn !")
+        st.write(pred_prob)
     else:
         st.error("This customer may attrite. Do something !")
+        st.write(pred_prob)
        
