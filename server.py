@@ -62,11 +62,12 @@ if submit:
     X = pd.DataFrame(data, index = [0])
     attrition = prediction_model.model.predict(X)
     pred_prob = prediction_model.model.predict_proba(X)
+    attr_prob = round(pred_prob[0,1],4)
     
     if attrition[0] == 0:
         st.balloons()
-        st.success(f"The customer is not likely to churn ! The probability of attrition being {round(pred_prob[0,1],4)}")
+        st.success(f"The customer is not likely to churn ! The probability of attrition being {attr_prob}")
     else:
-        st.error(f"This customer may attrite. Do something ! The probability of attrition being {pred_prob[0,1]}")
+        st.error(f"This customer may attrite. Do something ! The probability of attrition being {attr_prob}")
   
        
