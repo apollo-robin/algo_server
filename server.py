@@ -65,9 +65,8 @@ if submit:
     
     if attrition[0] == 0:
         st.balloons()
-        st.success("The customer is not likely to churn !")
-        st.write(f"The probability of attrition being {}",pred_prob[0,1])
+        st.success(f"The customer is not likely to churn ! The probability of attrition being {pred_prob[0,1]}")
     else:
-        st.error("This customer may attrite. Do something !")
-        st.write(f"The probability of attrition being {}",pred_prob[0,1])
+        st.error(f"This customer may attrite. Do something ! The probability of attrition being {pred_prob[0,1]}")
+  
        
